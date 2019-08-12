@@ -1,0 +1,6 @@
+<h1>Here is the smoothie you selected</h1>
+<h2><%= @smoothie.name %></h2>
+<% @smoothie.ingredients.each do |ingredient|%>
+<p><%= ingredient.name %></p>
+<% end %>
+<%= link_to "Delete", smoothy_path, method: :delete, data: { confirm: "Really?" }%>
